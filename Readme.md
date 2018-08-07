@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Maksim Stevenson](https://up.htmlacademy.ru/htmlcss/22/user/32417).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Перейро](https://htmlacademy.ru/profile/perejro).
 
 ---
 

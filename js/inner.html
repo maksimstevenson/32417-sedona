@@ -21,6 +21,7 @@
        </nav>
    </header>
     <main class="container">
+        <!-- фильтры и формы будут позже -->
         <section class="filter">
             <h3 class="filter-title">Инфраструктура</h3>
             <ul class="filter-amenities">
@@ -46,30 +47,55 @@
             </table>
             <span class="button">Показать</span>
         </section>
+        <!-- секция под .sotring -->
         <h2>Найдено:3</h2>
+        <!-- Ппросто p --->
         <ul class="breadcrumbs">
-            <li>Сортировка:</li>
+            <!-- это что хлебный крошки??? ul.sorting-list -->
+            <!-- в каждой li текст - ссылка -->
             <li class="breadcrumbs-active">По цене</li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
+            <!-- тут ли, который содержит стрелки , который сделаны через ссылки -->
         </ul>
+        <!-- /.sotring -->
         <section class="catalog">
             <h2 class="visually-hidden">Список отелей</h2>
             <ul>
+              
+              
                <li class="catalog-item">
                    <p class="catalog-item-image">
                       <a href="#">
                         <img src="http://placehold.it/150x100" alt="Picture of hotel">
                       </a>
                    </p>
+                   
+                   <!-- div -->
                    <h2>
                        <a href="#">Amara Resort<pre>&</pre>Spa</a>
                    </h2>
-                   <p>Гостиница от 4000 Р.</p>
-                   <span class="item-desc"><a href="#">Подробнее</a></span>
-                   <span class="item-booking"><a href="#">Забронировать</a></span>
+                     <!-- div.caatalog-item-info> -->
+                       <!-- div. catalog-left-column -->
+                          <p>Гостиница</p>
+                          <!-- зачем тут еще спан? просто ссылка --->
+                          <span class="item-desc"><a href="#">Подробнее</a></span>
+                       <!-- /div -->
+                       <!-- div. catalog-right-column -->
+                          <p>от 4000 рублей </p>
+                          <span class="item-booking"><a href="#">Забронировать</a></span>
+                       <!-- /div -->
+                     <!-- /div> -->
+                  <!-- /div -->
+                 
+                 <!-- блок с рейтингом 
+                   в нем 2 эелмента - список, где каждый ли - 1 звезда и спан, который опказывает общий рейтинг
+                  -->
                    <span class="rating">Рейтинг:8,5</span>
+                 <!-- закрыть блок -->
                </li>
+              
+              
                <li class="catalog-item">
                    <p class="catalog-item-image">
                       <a href="#">

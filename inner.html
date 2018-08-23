@@ -35,23 +35,14 @@
                 <li class="hotel-filter-item"><input type="checkbox" id="motel"><label for="motel">Мотель</label></li>
                 <li class="hotel-filter-item"><input type="checkbox" id="apartments"><label for="apartments">Апартменты</label></li>
             </ul>
-             не нужна тут таблица
-            <table class="hotel-price">
-                <tr>
-                    <th>Стоимость в сутки(Р):</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    это инпут, где "от" - лейбл "0" - значение в inpute
-                    <td>От 0</td>
-                  это инпут, где "до" - лейбл "3000" - значение в inpute
-                    <td>до 3000</td>
-                </tr>
-            </table>
+             <section class="hotel-price">
+                    <h3>Стоимость в сутки(Р):</h3>
+                    <label for="from">От</label><input type="text"id="from" value="0">
+                    <label for="to">до</label><input type="text" id="to" value="3000">
+             </section>
               <fieldset>
                <input type="range" min="0" step="100" max="3000">
-                ссылка скорее
-               <button>Показать</button>
+               <a href="#">Показать</a>
               </fieldset>
             </form>
         </section>

@@ -94,7 +94,7 @@
           <section class="map">
               <h2>Заинтересовались?</h2>
               <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="#"> Поиск гостиницы в Седоне </a> 
+          <button> Поиск гостиницы в Седоне </button> 
             <!--              here is gonna be a map-->
           </section>
    </main>
@@ -111,8 +111,30 @@
    </footer>
   
    <section class="modal modal-reservation">
-<!--       Here is gonna be form-->
-       <span class="modal-find">Найти</span>
+             <form action="/echo" method="post">
+               <fieldset>
+                   <label for="date">Дата заезда:</label> 
+                   <input type="date" name="date" value="24 апреля 2017">
+                   <label for="date">Дата выезда:</label> 
+                   <input type="date" name="date" value="4 июля 2017">
+                         <fieldset>
+                           
+                           <label for="adults">Взрослые:</label>
+                           <button class="minus">-</button>
+                           <input type="text"id="adults" value="2" readonly>
+                           <button class="plus">+</button>
+                         </fieldset>
+                         <fieldset>     
+                            <label for="kids">Дети:</label>
+                            <button class="minus">-</button>
+                            <input type="text" id="kids" value="0" readonly>
+                            <button class="plus">+</button>
+                            
+                        </fieldset>
+                        <button class="modal-find">Найти</button>
+               </fieldset>
+             </form>
+       
    </section>
     
 </body>

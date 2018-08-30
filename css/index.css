@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    
+    
+}
+ul {
+  list-style: none;
+}
+.site-navigation-item:link{
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+.site-navigation-item:hover{
+  font-size: 14px;
+  color: rgb(129, 179, 210);
+}
+.site-navigation-item:active.{
+  font-size: 14px;
+  color: rgb(118, 99, 87);
+}
+h3{
+    font-size: 21px;
+}
+
+.find-hotel{
+  background-color: #766357; 
+  width: 568px;
+  height: 86px;
+  color: white;
+  font-size: 21px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.find-hotel:hover{
+    background-color: #604e43;
+}
+
+.find-hotel:active{
+    background-color: #503e33;
+    color: #857871;
+}
+.modal-find{
+  background-color: #81b3d2;
+  color:white;    
+  width: 458px;
+  height: 58px;
+  font-size: 21px;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;    
+}
+.modal-find:hover{
+    background-color: #669ec0;
+}
+.modal-find:active{
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+.social-button{
+    background-color: #81b3d2;
+    width: 46px;
+    height: 48px;
+    background-position: center
+}
+.filter{
+    background:url("../img/filter-background.jpg") no-repeat; 
+    background-size:cover;
+}
+.open-button{
+    width: 141px;
+    height: 40px;
+    border:1px solid white;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.open-button:hover{
+    color:black;
+    background-color: white;
+}
+.breadcrumbs-active{
+    color:#81b3d2;
+    text-decoration: none;
+}
+.breadcrumbs{
+    color:#cacaca;
+    text-decoration: underline dotted #81b3d2;
+}
+
+.breadcrumbs:hover{
+    color:#81b3d2;
+}
+.breadcrumbs:active{
+    color: black;
+    text-decoration: none;
+}
+.item-desc{
+    width: 110px;
+    height: 27px;
+    background-color: #81b3d2;
+    padding: 5px 25px;
+/*    как добиться нужного размера кнопки с помошью паддингов*/
+    color:white;
+    text-decoration: none;
+}
+.item-desc:hover{
+    background-color:#669ec0;
+}
+.item-desc:active{
+    background-color: #669ec0;
+    color:#88b6d1;
+}
+.item-booking{
+    background-color: #766357;
+    color: white;
+    padding: 5px 30px;
+    text-decoration: none;
+    width: 142px;
+    height: 27px;
+ 
+}
+.item-booking:hover{
+    background-color: #604e43;
+}
+.item-booking:active{
+    background-color: #503e33;
+    color:#857871;
+}
+.hotel-name{
+    color:black;
+    text-decoration: none;
+}
+.hotel-name:hover{
+    color:#81b3d2;
+}
+.hotel-name:active{
+    color:#b2b2b2;
+}
+

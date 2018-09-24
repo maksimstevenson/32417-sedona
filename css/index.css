@@ -1,3 +1,71 @@
+Первое важное замечание - стиль кода. 
+Код должен быть однооборазен.
+1. пример про пробел между названием классов и первой скобки
+лучше использовать 2ой вариант
+
+.someClass{
+ color:black; 
+}
+
+.someClass2 {
+ color:black; 
+}
+
+------
+
+2. пример отступы между классами (перенос строки)
+лучше 2ой вариант
+
+.someClass {
+ color:black; 
+}
+.someClass2 {
+ color:black; 
+}
+
++++
+
+.someClass {
+ color:black; 
+}
+
+.someClass2 {
+ color:black; 
+}
+
+-----
+
+3. пример про цвета. Не пиши white/black и тд. используй #hex или rgba, если тебе нужна прозрачность(как в футере).
+если пишешь в hexe - пиши полностью #000000, a ne #000
+лучше 2ой вариант
+
+.someClass {
+ color:#000000;
+}
+
+.someClass2 {
+ color:rgba(0,0,0,0.6) 
+}
+
+----- 
+4. пример про кавычки. кавычки тоже в файле должны быть одного стиля - или ' или ""
+так неверно
+.someClass {
+ font-family: 'PT Sans', sans-serif;
+}
+
+.someClass2 {
+ font-family: "Arial", sans-serif;
+}
+
+это общие замечания по всему файлу цсс. я не буду писать в каких конкретно местах, думаю понятно что я имел в виду.
+
+ГЛОБАЛЬНЫЕ СТИЛИ у h1-h6, p, ul, ol, - нужна скидывать , пройдись по всему файлу.
+я дошел до 3\4 стилей и запутался в твоих стилях в порядке.
+Сделай нормальную очередность.
+Вначале идут все стили по главной странице сверху вних, потом по каталогу. 
+
+
 body{
     margin: 0;
     padding:0;
@@ -6,9 +74,31 @@ body{
     text-decoration: none;
     font-size: 14px;
 }
-.visually-hidden{
-    visibility: hidden;
+
+тут был старый твой вижуал хидден. вот правильный
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
+
+
 .site-wrapper {
     width: 1200px;
     margin-left: auto;
@@ -16,18 +106,23 @@ body{
     position: relative;
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
+
 ul {
+  запрещено скидывать глобально свойства по тегам. нужно применять там, где надо
   list-style: none;
 }
 figure{
+  запрещено скидывать глобально свойства по тегам. нужно применять там, где надо
     margin: 0;
 }
+
 .site-navigation-item:link{
   font-size: 14px;
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-decoration: none;
 }
+
 .site-navigation-item:hover{
   font-size: 14px;
   color: rgb(129, 179, 210);
@@ -36,13 +131,18 @@ figure{
   font-size: 14px;
   color: rgb(118, 99, 87);
 }
+
 h3{
+    глобальный h3? к чему он относится?
     font-size: 21px;
 }
 
+
 .find-hotel{
-  background-color: #766357; 
+  background-color: #766357;
+  ширину тоже отрегулируй паддиногм
   width: 568px;
+  фикс высоты не должно быть, должна регулироваться паддингом
   height: 86px;
   color: white;
   font-size: 21px;
@@ -59,6 +159,9 @@ h3{
     background-color: #503e33;
     color: #857871;
 }
+
+форма должна иметь позишин асболют и привязана к к блоку, в котором находится кнопка.
+размеры высота \ ширина не задаются. всё регулируется отступами и содержимым
 .modal-find{
   background-color: #81b3d2;
   color:white;    
@@ -81,6 +184,7 @@ h3{
     background:url("../img/filter-background.jpg") no-repeat; 
     background-size:cover;
 }
+все кнопки не имеют фикс ширин\высот. регулировка паддингами
 .open-button{
     width: 141px;
     height: 40px;
@@ -95,6 +199,8 @@ h3{
     color:black;
     background-color: white;
 }
+
+Что за хлебные крошки? я на нашел таких стилей в файле.. может мимо смотрел
 .breadcrumbs-active{
     color:#81b3d2;
     text-decoration: none;
@@ -111,6 +217,8 @@ h3{
     color: black;
     text-decoration: none;
 }
+
+тоже самое
 .item-desc{
     width: 110px;
     height: 27px;
@@ -142,6 +250,11 @@ h3{
     background-color: #503e33;
     color:#857871;
 }
+
+item-booking i item-descr имееют общие стили - отступы сверху\снизу, шрифт, но есть и свои личные.
+лучше сделать какую-то button-catalog.button-booking i button-catalog.buttom-descr , где в 
+button-catalog будут общие стили, в личных классах- свои стили
+
 .hotel-name{
     color:black;
     text-decoration: none;
@@ -154,14 +267,16 @@ h3{
 }
 /*STYLING NAVIGATION|||||||||||||||||||||||||||*/
 
+кусок навигейшена вначале файла, кусок тут?
 .site-navigation{
     display: flex;
     align-items:flex-start;
     padding-left: 6%;
     padding-right: 6%;
+    паддинги в кикселях нормально укажи
     margin: 0;
     list-style: none;
-
+  
        
 }
 .header-logo{
@@ -172,6 +287,7 @@ h3{
     margin-left: -70px;
     top:0;
     z-index: 10;
+  логотип должен позиционироваться от ближайшего родителя.... что-то кому-то нужно дать
 }
 
 
@@ -180,6 +296,7 @@ h3{
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+  дай лишкам класс
 }
 
 .site-navigation > li:nth-child(1),
@@ -207,10 +324,13 @@ h3{
     padding-bottom: 50px;
     padding-left: 355px;
     padding-right: 355px;
+  слева справа паддинги не нужны. h3 i p будут центроваться за счет их маргин лефт и райт ауто
 }
 .slogan h3{
+    не ширину, а максширину
     width: 430px;
     text-align: center;
+    зачем лефт? нужно левый и правый ауто сделать
     margin-left: 20px;
     margin-bottom: 40px;
     margin-top: 0;
@@ -220,9 +340,11 @@ h3{
     margin-bottom: 50px;
     width: 490px;
     margin: 0;
+   максвиз, выравнимание по центру
 }
 .amenities-list{
     width: 1200px;
+   зачем тут это? оно ж ниже переопределяется
 }
 .features-item,
 .amenities-list,
@@ -243,6 +365,9 @@ h3{
     background-size:cover;
     width:800px;
 }
+
+у девил и седона много одинаковых стилей. подумай что с этим можно сделать (по аналогии кнопок на 2ой странице)
+
 .features-list{
     padding: 0;
     margin: 0;
@@ -252,7 +377,7 @@ h3{
     position: relative;
 }
 .features-item:last-of-type{
-
+ всякие пустые теги которые ты зачем-то написал и не ипользуешь удаляй. это к глобальным правкам относится
 }
 .features-info{
     width: 400px;
@@ -362,6 +487,7 @@ h3{
     margin-right: auto;
     font-size: 30px;
     line-height: 36px;
+  вот к примеру у этого h2 остались встроенные маргины сверху и снизу. их нужно удалять.
 }
 .interesting-text p {
     margin-left: auto;
@@ -373,6 +499,7 @@ h3{
 }
 .booking-map{
 /*    width: 1718px;*/
+  шта? 1718?
     height: 748px;
     display: flex;
     justify-content: center;
@@ -541,13 +668,16 @@ input::-webkit-input-placeholder,
     display: flex;
     align-items: center;
     justify-content: space-around;
+  выравнимание спейс-бетвин и отспупы слева справа через паддинги
     background-color: rgba(255, 255, 255, 0.9);
     padding-top: 20px;
     padding-bottom: 20px;
     position: absolute;
     width: 1200px;
+  не 12000, а 100%
     opacity: 0.9;
     margin-top: -87px;
+  откуда маргин топ -87пх ? такого не должно быть
 }
 .inner-footer{
     margin-top: 0px;

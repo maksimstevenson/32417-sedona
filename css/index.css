@@ -5,8 +5,6 @@ body{
     text-transform: uppercase;
     text-decoration: none;
     font-size: 14px;
-    
-    
 }
 .visually-hidden{
     visibility: hidden;
@@ -20,6 +18,9 @@ body{
 }
 ul {
   list-style: none;
+}
+figure{
+    margin: 0;
 }
 .site-navigation-item:link{
   font-size: 14px;
@@ -115,7 +116,6 @@ h3{
     height: 27px;
     background-color: #81b3d2;
     padding: 5px 25px;
-/*    как добиться нужного размера кнопки с помошью паддингов*/
     color:white;
     text-decoration: none;
 }
@@ -271,7 +271,7 @@ h3{
     width: 100%;
 }
 
-.features-item-list li {
+.features-item-list-last {
     width: 33.33%;  
     padding-top:48px;
     padding-bottom: 62px;
@@ -485,8 +485,8 @@ input::-webkit-input-placeholder,
 }
 
 
-/*STYLING HEADLINE///////////////////////////////////*/
-.headline{
+/*STYLING .main-section///////////////////////////////////*/
+.main-section{
     display: flex;
     justify-content: center;
     background-image: url("../img/background-picture.jpg"); 
@@ -496,7 +496,7 @@ input::-webkit-input-placeholder,
     height: 600px;
 }
 
-.headline::after {
+.main-section::after {
     content: '';
     width:100%;
     height: 57px;
@@ -508,7 +508,7 @@ input::-webkit-input-placeholder,
     background-size: cover;
     background-image: url('../img/intro-mask.svg');
 }
-.headline>img:first-child{
+.main-section>img:first-child{
 }
 
 /*STYLING FOOTER!!!!///////////////////////////////*/
@@ -536,10 +536,7 @@ input::-webkit-input-placeholder,
 .social-link:active svg path {
     fill:#88b6d1;
 }
-.inner-footer{
-    margin-top: 0px;
-    position: relative;
-}
+
 .main-footer{
     display: flex;
     align-items: center;
@@ -743,7 +740,7 @@ input::-webkit-input-placeholder,
 label{
     position: relative;
 }
-.checkbox::before{
+.checkbox::before {
     content:""  ;
     position: absolute;
     background-image: url("../img/checkbox-off.svg");

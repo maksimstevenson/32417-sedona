@@ -740,6 +740,7 @@ input::-webkit-input-placeholder,
 label{
     position: relative;
 }
+
 .checkbox::before {
     content:""  ;
     position: absolute;

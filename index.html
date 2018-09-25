@@ -14,10 +14,10 @@
                     <img src="img/logo.png" width="140" height="72px" alt="logo">
                 </a>
                <ul class="site-navigation">
-                   <li><a href="info.html"  class="site-navigation-item">Информация</a></li>
-                   <li><a href="media.html"  class="site-navigation-item">Фото и видео</a></li>
-                   <li><a href="map.html" class="site-navigation-item" >Карта штата</a></li>
-                   <li><a href="inner.html"  class="site-navigation-item">Гостиницы</a></li>
+                   <li class="site-navigation-item"><a href="info.html"  class="site-navigation-link">Информация</a></li>
+                   <li class="site-navigation-item"><a href="media.html"  class="site-navigation-link">Фото и видео</a></li>
+                   <li class="site-navigation-item"><a href="map.html" class="site-navigation-link" >Карта штата</a></li>
+                   <li class="site-navigation-item"><a href="inner.html"  class="site-navigation-link">Гостиницы</a></li>
                </ul>
            </nav>
        </header>
@@ -37,7 +37,7 @@
                       <p>-№1-</p>
                       <p>Седона - не аттракицон для туристов,там течет своя жизнь</p>
                     </div>
-                    <figure class="features-image-sedona">
+                    <figure class="features-image sedona-image">
         
                     </figure>
                  </li>
@@ -58,7 +58,7 @@
                      </ul>
                  </li>
                    <li class="features-item">
-                       <figure class="features-image-devil">
+                       <figure class="features-image bridge-image">
 
                        </figure>
                        <div class="features-info">
@@ -98,12 +98,12 @@
                  <div class="interesting">
                    <div class="interesting-text">
                       <h2>Заинтересовались?</h2>
-                      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                    </div>
                     <button class="find-hotel"> Поиск гостиницы в Седоне </button> 
-                 </div>
-                 <div class="booking-map">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                 
+                 
+                    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="input-item">
                 <label for="arrive-date">Дата заезда:</label>
                 <input class="input-date" type="text" id="arrive-date" name="arrive-date" placeholder="24 апреля 2017">
@@ -186,7 +186,9 @@
             </div>
               <button class="modal-find" type="submit">Найти</button>
             </form>
-          </div>
+                <div class="booking-map">
+                 </div>
+        </div>
     </section>
        </main>
        <footer class="main-footer">

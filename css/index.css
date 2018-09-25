@@ -1,71 +1,3 @@
-Первое важное замечание - стиль кода. 
-Код должен быть однооборазен.
-1. пример про пробел между названием классов и первой скобки
-лучше использовать 2ой вариант
-
-.someClass{
- color:black; 
-}
-
-.someClass2 {
- color:black; 
-}
-
-------
-
-2. пример отступы между классами (перенос строки)
-лучше 2ой вариант
-
-.someClass {
- color:black; 
-}
-.someClass2 {
- color:black; 
-}
-
-+++
-
-.someClass {
- color:black; 
-}
-
-.someClass2 {
- color:black; 
-}
-
------
-
-3. пример про цвета. Не пиши white/black и тд. используй #hex или rgba, если тебе нужна прозрачность(как в футере).
-если пишешь в hexe - пиши полностью #000000, a ne #000
-лучше 2ой вариант
-
-.someClass {
- color:#000000;
-}
-
-.someClass2 {
- color:rgba(0,0,0,0.6) 
-}
-
------ 
-4. пример про кавычки. кавычки тоже в файле должны быть одного стиля - или ' или ""
-так неверно
-.someClass {
- font-family: 'PT Sans', sans-serif;
-}
-
-.someClass2 {
- font-family: "Arial", sans-serif;
-}
-
-это общие замечания по всему файлу цсс. я не буду писать в каких конкретно местах, думаю понятно что я имел в виду.
-
-ГЛОБАЛЬНЫЕ СТИЛИ у h1-h6, p, ul, ol, - нужна скидывать , пройдись по всему файлу.
-я дошел до 3\4 стилей и запутался в твоих стилях в порядке.
-Сделай нормальную очередность.
-Вначале идут все стили по главной странице сверху вних, потом по каталогу. 
-
-
 body{
     margin: 0;
     padding:0;
@@ -75,19 +7,17 @@ body{
     font-size: 14px;
 }
 
-тут был старый твой вижуал хидден. вот правильный
+Абсолютно ничего не понимаю!!!!!!
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
 
   -webkit-clip-path: inset(100%);
@@ -97,8 +27,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-
-
 .site-wrapper {
     width: 1200px;
     margin-left: auto;
@@ -107,43 +35,9 @@ input[type="radio"].visually-hidden {
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-ul {
-  запрещено скидывать глобально свойства по тегам. нужно применять там, где надо
-  list-style: none;
-}
-figure{
-  запрещено скидывать глобально свойства по тегам. нужно применять там, где надо
-    margin: 0;
-}
-
-.site-navigation-item:link{
-  font-size: 14px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.site-navigation-item:hover{
-  font-size: 14px;
-  color: rgb(129, 179, 210);
-}
-.site-navigation-item:active{
-  font-size: 14px;
-  color: rgb(118, 99, 87);
-}
-
-h3{
-    глобальный h3? к чему он относится?
-    font-size: 21px;
-}
-
-
-.find-hotel{
+.find-hotel {
   background-color: #766357;
-  ширину тоже отрегулируй паддиногм
-  width: 568px;
-  фикс высоты не должно быть, должна регулироваться паддингом
-  height: 86px;
+  padding: 28px 140px;
   color: white;
   font-size: 21px;
   font-family: 'PT Sans', sans-serif;
@@ -151,135 +45,132 @@ h3{
   text-transform: uppercase;
   border: none;
 }
-.find-hotel:hover{
+
+.find-hotel:hover {
     background-color: #604e43;
 }
 
-.find-hotel:active{
+.find-hotel:active {
     background-color: #503e33;
     color: #857871;
 }
 
-форма должна иметь позишин асболют и привязана к к блоку, в котором находится кнопка.
-размеры высота \ ширина не задаются. всё регулируется отступами и содержимым
-.modal-find{
+.modal-find {
   background-color: #81b3d2;
   color:white;    
-  width: 458px;
-  height: 58px;
+  padding: 20px 0px;
   font-size: 21px;
   font-family: 'PT Sans', sans-serif;
   text-transform: uppercase;
   border: none;
   font-weight: 700;    
 }
-.modal-find:hover{
+
+.modal-find:hover {
     background-color: #669ec0;
 }
-.modal-find:active{
+
+.modal-find:active {
     background-color: #5496bd;
     color: #88b6d1;
 }
-.filter{
+
+.filter {
     background:url("../img/filter-background.jpg") no-repeat; 
     background-size:cover;
 }
-все кнопки не имеют фикс ширин\высот. регулировка паддингами
-.open-button{
-    width: 141px;
-    height: 40px;
-    border:1px solid white;
-    color: white;
-    padding: 5px 20px;
-    text-decoration: none;
-    background-color: transparent;
-}
 
-.open-button:hover{
-    color:black;
-    background-color: white;
-}
-
-Что за хлебные крошки? я на нашел таких стилей в файле.. может мимо смотрел
-.breadcrumbs-active{
+.breadcrumbs-active {
     color:#81b3d2;
     text-decoration: none;
 }
-.breadcrumbs{
+
+.breadcrumbs {
     color:#cacaca;
     text-decoration: underline dotted #81b3d2;
 }
 
-.breadcrumbs:hover{
+.breadcrumbs:hover {
     color:#81b3d2;
 }
-.breadcrumbs:active{
+.breadcrumbs:active {
     color: black;
     text-decoration: none;
 }
 
-тоже самое
-.item-desc{
-    width: 110px;
-    height: 27px;
-    background-color: #81b3d2;
+.button-catalog {
     padding: 5px 25px;
-    color:white;
+    color:#ffffff;
     text-decoration: none;
 }
-.item-desc:hover{
+.button-desc {
+    background-color: #81b3d2;
+}
+.button-booking {
+    background-color: #766357;
+}
+
+.button-desc:hover {
     background-color:#669ec0;
 }
-.item-desc:active{
+
+.button-desc:active {
     background-color: #669ec0;
     color:#88b6d1;
 }
-.item-booking{
-    background-color: #766357;
-    color: white;
-    padding: 5px 30px;
-    text-decoration: none;
-    width: 142px;
-    height: 27px;
- 
-}
-.item-booking:hover{
+
+.button-booking:hover {
     background-color: #604e43;
 }
-.item-booking:active{
+
+.button-booking:active {
     background-color: #503e33;
     color:#857871;
 }
 
-item-booking i item-descr имееют общие стили - отступы сверху\снизу, шрифт, но есть и свои личные.
-лучше сделать какую-то button-catalog.button-booking i button-catalog.buttom-descr , где в 
-button-catalog будут общие стили, в личных классах- свои стили
-
-.hotel-name{
+.hotel-name {
     color:black;
     text-decoration: none;
 }
-.hotel-name:hover{
+
+.hotel-name:hover {
     color:#81b3d2;
 }
-.hotel-name:active{
+
+.hotel-name:active {
     color:#b2b2b2;
 }
 /*STYLING NAVIGATION|||||||||||||||||||||||||||*/
 
-кусок навигейшена вначале файла, кусок тут?
-.site-navigation{
+.site-navigation {
     display: flex;
     align-items:flex-start;
-    padding-left: 6%;
-    padding-right: 6%;
-    паддинги в кикселях нормально укажи
+    padding: 0px 72px;
     margin: 0;
     list-style: none;
-  
-       
 }
-.header-logo{
+
+.site-navigation-link:link {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-navigation-link:hover {
+  font-size: 14px;
+  color: rgb(129, 179, 210);
+}
+
+.site-navigation-link:active {
+  font-size: 14px;
+  color: rgb(118, 99, 87);
+}
+.main-navigation {
+    position: relative;
+}
+
+.header-logo {
     width: 140px;
     height: 72px;
     position: absolute;
@@ -287,99 +178,90 @@ button-catalog будут общие стили, в личных классах-
     margin-left: -70px;
     top:0;
     z-index: 10;
-  логотип должен позиционироваться от ближайшего родителя.... что-то кому-то нужно дать
 }
 
-
-.site-navigation>li{
-    width: 20%;
+/*КАК ПРАВИЛЬНО ЗАДАТЬ ОТСТУПЫ МЕЖДУ ПУНКТАМИ НАВИГАЦИИ?????*/
+.site-navigation-item {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-  дай лишкам класс
 }
 
-.site-navigation > li:nth-child(1),
-.site-navigation > li:nth-child(2){
+.site-navigation-item:nth-of-type(1),
+.site-navigation-item:nth-of-type(2){
     text-align: left;
 }
 
-.site-navigation > li:nth-child(3),
-.site-navigation > li:nth-child(4) {
+.site-navigation-item:nth-of-type(3),
+.site-navigation-item:nth-of-type(4) {
     text-align: right;
 }
 
-.site-navigation > li:nth-child(3) {
+.site-navigation-item:nth-of-type(3) {
     margin-left: auto;
-    padding-right: 27px;
+    padding-right: 180px;
 }
 
-.site-navigation > li:nth-child(2) {
-    padding-left: 27px;
+.site-navigation-item:nth-of-type(2) {
+    padding-left: 150px;
 }
 
 /*MAIN///////////////////////////////*/
-.slogan{
+.slogan {
     padding-top: 55px;
     padding-bottom: 50px;
-    padding-left: 355px;
-    padding-right: 355px;
-  слева справа паддинги не нужны. h3 i p будут центроваться за счет их маргин лефт и райт ауто
 }
-.slogan h3{
-    не ширину, а максширину
-    width: 430px;
+
+.slogan h3 {
+    max-width: 430px;
     text-align: center;
-    зачем лефт? нужно левый и правый ауто сделать
-    margin-left: 20px;
+    margin-left:auto;
     margin-bottom: 40px;
     margin-top: 0;
-    margin-right: 0;
+    margin-right:auto;
+    font-size: 21px;
 }
-.slogan p{
+.slogan p {
     margin-bottom: 50px;
-    width: 490px;
-    margin: 0;
-   максвиз, выравнимание по центру
+    max-width: 490px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.amenities-list{
-    width: 1200px;
-   зачем тут это? оно ж ниже переопределяется
-}
+
 .features-item,
 .amenities-list,
-.features-item-list{
+.features-item-list {
     display: flex;
     padding: 0;
     width: 100%;
+    list-style: none;
 }
-.features-image-sedona{
+.sedona-image {
     background-image: url("../img/sedona.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    width:800px;
 }
-.features-image-devil{
+
+.bridge-image {
     background-image: url("../img/Devil's%20bridge.jpg");
+}
+
+.features-image {
     background-repeat: no-repeat;
     background-size:cover;
     width:800px;
+    margin: 0;
 }
 
-у девил и седона много одинаковых стилей. подумай что с этим можно сделать (по аналогии кнопок на 2ой странице)
-
-.features-list{
+.features-list {
     padding: 0;
     margin: 0;
-    
+    list-style: none;    
 }
-.features-item{
+
+.features-item {
     position: relative;
 }
-.features-item:last-of-type{
- всякие пустые теги которые ты зачем-то написал и не ипользуешь удаляй. это к глобальным правкам относится
-}
-.features-info{
+
+.features-info {
     width: 400px;
     background-color: #81b3d2;
     color: white;
@@ -390,7 +272,8 @@ button-catalog будут общие стили, в личных классах-
     padding-top: 45px;
     padding-bottom: 60px;
 }
-.features-item-list{
+
+.features-item-list {
     background-color: #eeeeee;
     color: black;
     width: 100%;
@@ -406,12 +289,13 @@ button-catalog будут общие стили, в личных классах-
 }
 
 .features-info p,
-.amenities-item p{
+.amenities-item p {
     max-width: 303px;
     text-align: center;
     margin: 0;
     margin-top: 20px;
- }
+}
+
 .features-info h3,
 .amenities-item h3{
     font-size: 21px;
@@ -419,7 +303,8 @@ button-catalog будут общие стили, в личных классах-
     margin: 0;
     max-width: 155px;
 }
-.amenities-item{
+
+.amenities-item {
     position: relative;
     padding-top: 161px;
     padding-bottom: 82px;
@@ -429,7 +314,6 @@ button-catalog будут общие стили, в личных классах-
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .amenities-item:before {
@@ -443,26 +327,29 @@ button-catalog будут общие стили, в личных классах-
     background-size: contain;
 }
 
-.amenities-item:nth-of-type(1)::before{
+.amenities-item:nth-of-type(1)::before {
     background-image: url('../img/icon-1.svg');
     width: 75px;
     height: 72px;
 }
-.amenities-item:nth-of-type(2)::before{
+
+.amenities-item:nth-of-type(2)::before {
     background-image: url('../img/icon-3.svg');
     width: 74px;
     height: 70px;
 }
 
-.amenities-item:nth-of-type(3)::before{
+.amenities-item:nth-of-type(3)::before {
     background-image: url('../img/icon-2.svg');
     width: 64px;
     height: 76px;
 }
-.features-info-bottom{
+
+.features-info-bottom {
     width: 400px;
 }
-.features-item-list h3{
+
+.features-item-list h3 {
     font-size: 21px;
     text-align: center;
     margin: 0;
@@ -473,22 +360,24 @@ button-catalog будут общие стили, в личных классах-
     margin: 0;
     text-align: center;
 }
-.interesting{
+
+.interesting {
     text-align: center;
     margin: auto;
     position: relative;
 }
-.interesting-text{
+
+.interesting-text {
     margin-top: 50px;
     margin-bottom: 45px;
 }
+
 .interesting-text h2 {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto 0px;
     font-size: 30px;
     line-height: 36px;
-  вот к примеру у этого h2 остались встроенные маргины сверху и снизу. их нужно удалять.
 }
+
 .interesting-text p {
     margin-left: auto;
     margin-right: auto;
@@ -498,8 +387,6 @@ button-catalog будут общие стили, в личных классах-
     color: #333333;
 }
 .booking-map{
-/*    width: 1718px;*/
-  шта? 1718?
     height: 748px;
     display: flex;
     justify-content: center;
@@ -518,7 +405,8 @@ input::-webkit-input-placeholder,
 .search-form{
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    left: 315px;
     padding: 55px;
     background-color: white;
     background-position: top center;
@@ -640,11 +528,12 @@ input::-webkit-input-placeholder,
 
 /*STYLING FOOTER!!!!///////////////////////////////*/
 .social-networks-buttons,
-.social-buttons-list
-{
+.social-buttons-list {
     display: flex;
     justify-content: center;
+    list-style: none;
 }
+
 .social-button{
     margin-right: 6px;
 }
@@ -664,61 +553,72 @@ input::-webkit-input-placeholder,
     fill:#88b6d1;
 }
 
-.main-footer{
+.main-footer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-  выравнимание спейс-бетвин и отспупы слева справа через паддинги
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.9);
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 135px;
+    padding-right: 100px;
     position: absolute;
-    width: 1200px;
-  не 12000, а 100%
+    bottom: 0px;
+    width: 100%;
     opacity: 0.9;
-    margin-top: -87px;
-  откуда маргин топ -87пх ? такого не должно быть
+    box-sizing: border-box;
 }
-.inner-footer{
+
+.inner-footer {
     margin-top: 0px;
     position: relative;
 }
+
 .social-buttons-list,
-.main-footer h2{
+.main-footer h2 {
     margin: 0;
 }
-.copyright{
+
+.copyright {
     display: flex;
     align-items: center;
 }
-.copyright p{
+
+.copyright p {
     margin: 0;
     transform: translateX(-10%);
 }
-.logo-htmlacademy{
+
+.logo-htmlacademy {
     fill:black;
 }
-.logo-htmlacademy:hover{
+
+.logo-htmlacademy:hover {
     fill:#81b3d2;
 }
-.logo-htmlacademy:active{
+
+.logo-htmlacademy:active {
     fill:#ebebeb;
 }
-
 /*?///////////////////////////////////*/
 /*////////////////////////////////////////////*/
 /*//////////////////INNER PAGE////////////////////////*/
 /*//////////////////////////////////////////////*/
-.filter form{
+.filter form {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.filter-amenities{
+
+.filter-amenities {
     display: flex;
     color: #ffffff;
 }
 
+.filter-infrastructure-item,
+.filter-amenities-item {
+    list-style: none;
+}
 /*//////////STYLING .filter-range//////////////*/
 
 .filter-range {
@@ -901,6 +801,7 @@ label{
 .sorting p,
 .sorting ul{
     margin: 0;
+    list-style: none;
 }
 .sorting h3{
     margin: 0;
@@ -928,6 +829,7 @@ label{
 .catalog ul{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 .catalog-item{
     display: flex;
@@ -937,8 +839,8 @@ label{
     padding-top: 30px;
     padding-bottom: 29px;
 }
-.catalog-item a{
-    height: 90px;
+.catalog-item-image{
+    margin: 0;
 }
 .catalog-item-preview{
     display: flex;

@@ -48,6 +48,7 @@ input[type="radio"].visually-hidden {
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-decoration: none;
+  line-height: 26px;
 }
 
 .site-navigation-link:hover {
@@ -73,14 +74,11 @@ input[type="radio"].visually-hidden {
     z-index: 10;
 }
 
-Каждый site-navigation-item должен занимать 20% ширины от ul.
-В свою очередь у ul должен быть дисплей флекс.
-нужно выставть Line-height у ссылок 26пх как в макете.
-
 .site-navigation-item {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    width:20%;
 }
 
 .site-navigation-item:nth-of-type(1),
@@ -95,14 +93,18 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-item:nth-of-type(3) {
     margin-left: auto;
+/*
     другой паддинг будет
     padding-right: 180px;
+*/
 }
 
+/*
 .site-navigation-item:nth-of-type(2) {
   другой паддинг будет
     padding-left: 150px;
 }
+*/
 
 /*..............STYLING main................*/
 /*............STYLING .main-section.....................*/
@@ -113,8 +115,7 @@ input[type="radio"].visually-hidden {
     background-size: cover;
     align-items: center;
     position: relative;
-    height: 600px; 
-  откуда 600 ? 510
+    height: 510px; 
 }
 
 .main-section::after {
@@ -129,9 +130,7 @@ input[type="radio"].visually-hidden {
     background-size: cover;
     background-image: url('../img/intro-mask.svg');
 }
-.main-section>img:first-child{
-  это че ?
-}
+
 /*............. .slogan..............*/
 .slogan {
     padding-top: 55px;
@@ -139,29 +138,18 @@ input[type="radio"].visually-hidden {
 }
 
 .slogan h3 {
-  мы используем максвиз и маргин лефт, райт ауто для центрование текст. тут у нас используется тег BR же, как мы говорили.
-  значит максширина не нужна, просто нужно выравнить текст с помощью текс-элайн:центер. убери ширину, левый и правый маргин.
-  
-    max-width: 430px;
     text-align: center;
-    margin-left:auto;
     margin-bottom: 40px;
     margin-top: 0;
-    margin-right:auto;
     font-size: 21px;
-  
-  забываешь писать line-height и стили немного другие тут
     line-height: 26px;
-    margin-bottom: 28px;
 }
 .slogan p {
-  ширирина ну нежна , ВСЕ маргины не нужны. зачем они вообще тут? особенно нижний. высота строки по макету 26 пикселей.
-  
-    margin-bottom: 50px;
-    max-width: 490px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin: 0;
+    line-height: 26px;
 }
+
 /*............ section .features................*/
 .features-list {
     padding: 0;
@@ -185,7 +173,7 @@ input[type="radio"].visually-hidden {
 .features-info {
     width: 400px;
     background-color: #81b3d2;
-    color: white; в хексе\ргб
+    color: #ffffff;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -196,14 +184,16 @@ input[type="radio"].visually-hidden {
 
 .features-info p,
 .amenities-item p {
-    max-width: 303px; ширина не совпадает смакетом
+    max-width: 305px; 
     text-align: center;
     margin: 0;
     margin-top: 20px;
+    line-height: 21px;
 }
 
 .features-info h3,
 .amenities-item h3{
+    line-height: 21px;
     font-size: 21px;
     text-align: center;
     margin: 0;
@@ -215,8 +205,7 @@ input[type="radio"].visually-hidden {
 }
 
 .bridge-image {
-  переэкспортируй картинку. название файла должно быть без пробелов
-    background-image: url("../img/Devil's%20bridge.jpg");
+    background-image: url("../img/Devil's-bridge.jpg");
 }
 
 .features-image {
@@ -282,24 +271,25 @@ input[type="radio"].visually-hidden {
     align-items: center;
 }
 
-забыл про отступы между элемнтами.
 .features-item-list h3 {
     font-size: 21px;
     text-align: center;
     margin: 0;
     max-width: 155px;
+    line-height: 21px;
 }
 .features-item-list p {
     max-width: 303px;
     margin: 0;
+    margin-top: 20px;
     text-align: center;
+    line-height: 21px;
+    
 }
 
 /*........... section .booking.................*/
 .interesting {
     text-align: center;
-    margin: auto;
-  зачем маргин ауто? что это зачем почему что происходит?
     position: relative;
 }
 
@@ -309,20 +299,19 @@ input[type="radio"].visually-hidden {
 }
 
 .interesting-text h2 {
-    margin: auto 0px; что это за запись? если хочешь скинуть со всех сторон - то просто margin:0;
+    margin:0;
     font-size: 30px;
     line-height: 36px;
 }
 
 .interesting-text p {
-  зачем лефт и райт ауто? кого ты тут центрируешь ?
-  остлись дефолтные маргины. какой-то нужно убрать, какой-то нужно выставить как в макете.
-    margin-left: auto; 
-    margin-right: auto;
+    text-align: center;
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
     color: #333333;
+    margin: 0;
+    margin-top: 32px;
 }
 
 .find-hotel {
@@ -347,7 +336,7 @@ input[type="radio"].visually-hidden {
 
 input::-webkit-input-placeholder,
 .search-form{
-    color: black; хекс
+    color: #000000;
     font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -357,13 +346,12 @@ input::-webkit-input-placeholder,
     flex-direction: column;
     position: absolute;
     left: 315px;
-    padding: 55px;
+    padding: 55.5px;
+    padding-bottom: 49px;
+    padding-top: 49px;
     background-color: white;
     background-position: top center;
     text-align: center;
-    width: 460px; не должно быть!!!
-    height: 310px; не должно быть!!!
-  регулируй размер паддингами что бы был как в макете
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
@@ -392,11 +380,10 @@ input::-webkit-input-placeholder,
     fill: #cacaca;
     outline: none;
     position: absolute;
-    right: 1%;
-    top: 8px; 
-  позиционируй в px , a ne B %
+    right: 5px;
+    top: 6px; 
     background-color: transparent;
-  календарям в html дай type='button'
+    cursor: pointer;
 }
 
 .amount {
@@ -421,10 +408,40 @@ input::-webkit-input-placeholder,
     height: 38px;
     background-color: #f2f2f2;
     cursor: pointer; 
-  где + - котоыре должны быть в них? вставь их как какртинки
+    position: relative;
 }
 
+/*.minus::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/minus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    outline: 1px solid blue;
+}
+
+.plus::after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    background-color: #a9a9a9;
+    cursor: pointer;
+    left: 16px;
+    top:16px;
+    width: 38px;
+    height:38px;
+}*/
+
+
 .adult-input {
+    text-align: center;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -435,7 +452,6 @@ input::-webkit-input-placeholder,
     height: 38px;
     background-color: #f2f2f2;
     cursor: pointer;    
-  текст внутри не центрирован . почему?
 }
 
 .adult-amount label {
@@ -473,9 +489,7 @@ input::-webkit-input-placeholder,
 }
 
 .booking-map{
-    height: 748px;
-  почему 748 ? откуда таки размеры? 
-  во-первых, 593пх и лучше вместо высоты сделай паддинг-топ:593px;
+    padding-top: 593px;
     display: flex;
     justify-content: center;
     background-image: url("../img/map.jpg");
@@ -489,21 +503,22 @@ input::-webkit-input-placeholder,
     display: flex;
     justify-content: center;
     list-style: none;
+    width: 33.33%;
 }
 
-.social-button{
-  у последнего не должно быть правого маргина
+.social-button:not(:last-of-type) {
     margin-right: 6px;
 }
-.social-link{
+
+.social-link {
     display: flex;
     justify-content: center;
     align-items: center;
-  они вроде квадртатные
     width: 46px;
     height: 48px;
     background-color: #81b3d2;
     }
+
 .social-link:hover{
     background-color: #669ec0;
 }
@@ -519,10 +534,6 @@ input::-webkit-input-placeholder,
     background-color: rgba(255, 255, 255, 0.9);
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 135px;
-    padding-right: 100px;
-  падднгов левого и правого не должно быть.
-  каждый элемент футера (их 3 штуки) занимаеет 33.33% ширины, является флексом и центруирует внутри себя всё
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -535,20 +546,23 @@ input::-webkit-input-placeholder,
     position: relative;
 }
 
-у листа в социаклках остался паддинг левый
 .social-buttons-list,
 .main-footer h2 {
     margin: 0;
+    padding: 0;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
 }
 
 .copyright {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 33.33%;
 }
 
 .copyright p {
-    margin: 0;
-  зачем??
     transform: translateX(-10%);
 }
 
@@ -745,14 +759,11 @@ label{
 .sorting p,
 .sorting ul {
     margin: 0;
-  а что, у h3 и p есть лист-стайл?
     list-style: none;
 }
 
 .sorting h3 {
-    margin: 0;
-  лучше правый маргин делать, а не паддинг
-    padding-right: 48px;
+    margin-right: 48px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -772,27 +783,25 @@ label{
     padding: 0;
 }
 
-.arrow-down {
-  отсутп надо давать не ссылке, а ее родителю - лишке. и не надо создавать отдельный класс. обратись через :nth-child
+.arrows>li:last-child {
     margin-left: 12px;
 }
 
-что это за лебные крошки? я не нашел вообще это в твоем хтмл
-.breadcrumbs-active {
+.sorting-item-active {
     color:#81b3d2;
     text-decoration: none;
 }
 
-.breadcrumbs {
+.sorting-item {
     color:#cacaca;
     text-decoration: underline dotted #81b3d2;
 }
 
-.breadcrumbs:hover {
+.sorting-item:hover {
     color:#81b3d2;
 }
 
-.breadcrumbs:active {
+.sorting-item:active {
     color: black;
     text-decoration: none;
 }
@@ -856,8 +865,7 @@ label{
 }
 
 .catalog-item-rating li {
-  маргин, а не паддинг
-    padding-right: 4px;
+    margin-right: 4px;
 }
 
 .catalog-item-rating span {
@@ -914,5 +922,3 @@ label{
     align-items: center;
     justify-content: space-between;
 }
-
-ПРОЙТИСЬ по макету, посмотреть отступы между элементами, забываешь писать Line-height. Везде не совпадают. 

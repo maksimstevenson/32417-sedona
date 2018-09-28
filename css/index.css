@@ -586,6 +586,20 @@ input::-webkit-input-placeholder,
 
 /*............ FILTER................*/
 /*..............checkboxes................*/
+.main-search-menu fieldset {
+    border: 0px;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.main-search-menu fieldset:last-child {
+    margin-left: auto;
+}
+
+.main-search-menu fieldset:nth-child(2){
+    margin-left: 110px;
+}
+
 .filter {
     color: #ffffff;
     background:url("../img/filter-background.jpg") no-repeat; 
@@ -610,17 +624,21 @@ label{
     position: relative;
 }
 
-.checkbox::before {
+.checkbox input[type="checkbox"] + .checkbox-indicator::before {
     content:""  ;
     position: absolute;
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     width: 27px;
     height: 23px;
-    left: -15px;
-    top: 0;
+    left: -40px;
+    top: -3px;
     cursor: pointer;
 }
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator::before{
+    background-image: url("../img/checkbox-on.svg");
+}
+
 .checkbox:checked{
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
@@ -628,15 +646,18 @@ label{
 .filter label{
     font-size: 14px;
     line-height: 45px;
+    cursor: pointer;
 }
 
 /*...............filter range...................*/
+/*
 .filter-range {
   width: 330px;
   margin: 50px auto; 
   color: #ffffff;
   text-transform: uppercase;
 }
+*/
 
 .filter-range-title {
   margin-bottom: 9px;
@@ -848,8 +869,7 @@ label{
 }
 
 .catalog-left-column {
-  маргин
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
 .catalog-item-rating ul {

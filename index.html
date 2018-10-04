@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en ru"> 
 <head>
+    <link rel="stylesheet" href="css/styles.min.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Sedona</title>
@@ -36,7 +37,7 @@
                <img src="img/welcome.png" width="459" height="353" alt="Welcome">
             </section>   
             <section class="slogan">
-               <h3>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
+               <h3>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
                <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
             </section>   
             <section class="features">
@@ -44,8 +45,8 @@
                    <li class="features-item">
                          <div class="features-info">
                               <h3>Настоящий городок</h3>
-                              <p>-№1-</p>
-                              <p>Седона - не аттракицон для туристов,<br>там течет своя жизнь</p>
+                              <p>—№1—</p>
+                              <p>Седона — не аттракицон для туристов,<br>там течет своя жизнь</p>
                          </div>
                          <figure class="features-image sedona-image">
                          </figure>
@@ -58,7 +59,7 @@
                          </li>
                          <li class="amenities-item">
                               <h3>Еда</h3>
-                              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                              <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
                          </li>
                          <li class="amenities-item">
                              <h3>Сувениры</h3>
@@ -72,7 +73,7 @@
                        </figure>
                        <div class="features-info">
                          <h3>Там есть мост Дьявола</h3>
-                         <p>-№2-</p>
+                         <p>—№2—</p>
                          <p>Да, по нему можно пройти!Если конечно вы осмелитесь</p>
                        </div>
                   </li>
@@ -80,18 +81,18 @@
                       <ul class="features-item-list">
                           <li class="features-item-list-last">
                                  <h3>Небольшая площадь</h3>
-                                 <p>-№3-</p>
+                                 <p>—№3—</p>
                                  <p>Все достопримечательности находятся очень близко</p>
                           </li>
                           <li class="features-item-list-last">
                                 <h3>Красивая дорога</h3>
-                                <p>-№4-</p>
+                                <p>—№4—</p>
                                 <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                           </li>
                           <li class="features-item-list-last">
                                 <h3>Мало туристов</h3>
-                                <p>-№5-</p>
-                                <p>Большинство едет в Гранд Каньон и толпится там</p>
+                                <p>—№5—</p>
+                                <p>Большинство едет в Гранд Каньон<br> и толпится там</p>
                           </li>
                       </ul>
                   </li>
@@ -104,7 +105,8 @@
                           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                        </div>
                        <button class="find-hotel"> Поиск гостиницы в Седоне </button> 
-                       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                       <div class="booking-map">
+                          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                             <div class="input-item">
                                 <label for="arrive-date">Дата заезда:</label>
                                 <input class="input-date" type="text" id="arrive-date" name="arrive-date" placeholder="24 апреля 2017">
@@ -176,7 +178,7 @@
                                          <button class="adult-button minus" aria-label="уменьшить количество детей">
                                             −
                                          </button>
-                                         <input class="adult-input" type="text" id="children" name="children" placeholder="0">
+                                         <input class="adult-input" type="text" id="children" name="children" placeholder="0" >
                                          <button class="adult-button plus">
                                             +
                                          </button>
@@ -184,7 +186,7 @@
                             </div>
                             <button class="modal-find" type="submit">Найти</button>
                        </form>
-                       <div class="booking-map">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838976.8604818083!2d-112.21330565688184!3d34.77439654549185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336!5e0!3m2!1sen!2sus!4v1538374323336" width="100%" height="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
                        </div>
                  </div>
             </section>
@@ -236,5 +238,6 @@
                 </div>
        </footer>
     </div>          
+<script src="js/script.js"></script>
 </body>
 </html>

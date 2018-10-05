@@ -301,7 +301,7 @@ input[type="radio"].visually-hidden {
 .features-item-list {
     background-color: #eeeeee;
     color: black;
-    хекс width: 100%;
+    width: 100%;
 }
 
 .features-item-list-last {

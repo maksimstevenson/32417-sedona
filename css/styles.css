@@ -382,6 +382,7 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    vertical-align: top;
 }
 
 .find-hotel:hover {
@@ -418,12 +419,6 @@ input::-webkit-input-placeholder,
     background-color: #fbfbfb;
     -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-}
-
-.show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 @-webkit-keyframes shake {
@@ -902,7 +897,7 @@ label {
 }
 
 .checkbox input[type="checkbox"]:focus + .checkbox-indicator::before {
-    outline: 2px solid #0000ff;
+    outline: 2px solid #4D90FE;
 }
 
 .filter label {

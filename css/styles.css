@@ -241,7 +241,7 @@ input[type="radio"].visually-hidden {
 
 .bridge-image {
     background-color: #eeae9f;
-    background-image: url("../img/devil's-bridge.jpg");
+    background-image: url("../img/devil's-bridge-picture.jpg");
     background-position: 0% 53%;
 }
 
@@ -704,7 +704,6 @@ input::-webkit-input-placeholder,
     background-color: #f2f1ef;
     background-image: url("../img/map.jpg");
 }
-
 /*..............FOOTER..................*/
 .social-networks-buttons,
 .social-buttons-list {
